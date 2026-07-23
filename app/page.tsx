@@ -1,3 +1,29 @@
+// app/page.tsx
+import { LanguageProvider } from '@/components/LanguageProvider';
+import { Header } from '@/components/Header';
+import { Hero } from '@/components/Hero';
+import { Services } from '@/components/Services';
+import { Projects } from '@/components/Projects';
+import { Experience } from '@/components/Experience';
+import { WhyWorkWithMe } from '@/components/WhyWorkWithMe';
+import { TechStack } from '@/components/TechStack';
+import { Contact } from '@/components/Contact';
+import { Footer } from '@/components/Footer';
+
 export default function Home() {
-  return <main className="p-10">Fredy Hortua — coming soon</main>;
+  return (
+    <LanguageProvider>
+      <Header />
+      <main>
+        <Hero />
+        <Services />
+        <Projects />
+        <Experience />
+        <WhyWorkWithMe />
+        <TechStack />
+        <Contact />
+      </main>
+      <Footer />
+    </LanguageProvider>
+  );
 }
