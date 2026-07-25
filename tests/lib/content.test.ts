@@ -30,6 +30,10 @@ describe('content', () => {
     expect(enCounts).toEqual(esCounts);
   });
 
+  it('defines the same number of how-i-work tools in both languages', () => {
+    expect(content.en.howIWork.tools.length).toBe(content.es.howIWork.tools.length);
+  });
+
   it('includes a working contact email in both languages', () => {
     expect(content.es.contact.email).toBe('fredy.hortua@gmail.com');
     expect(content.en.contact.email).toBe('fredy.hortua@gmail.com');

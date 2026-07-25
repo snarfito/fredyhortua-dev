@@ -61,6 +61,11 @@ export interface SiteContent {
     heading: string;
     items: string[];
   };
+  howIWork: {
+    heading: string;
+    intro: string;
+    tools: string[];
+  };
   stack: {
     heading: string;
     categories: StackCategory[];
@@ -244,6 +249,12 @@ export const content: Record<Language, SiteContent> = {
         'Trabajo tanto con negocios y startups como con organizaciones sin fines de lucro.',
       ],
     },
+    howIWork: {
+      heading: 'Cómo trabajo',
+      intro:
+        'Construyo con herramientas de IA de última generación —Claude Code, Codex y agentes especializados de diseño UX/UI— como multiplicador de velocidad, dentro de flujos de trabajo estructurados que fuerzan revisión y pruebas en cada paso. Yo dirijo la arquitectura, reviso cada línea y respondo por el resultado: la IA acelera la ejecución, la experiencia de producción la valida.',
+      tools: ['Claude Code', 'Codex', 'Agentes de diseño UX/UI', 'Flujos de trabajo estructurados (skills)'],
+    },
     stack: {
       heading: 'Stack técnico',
       categories: [
@@ -426,6 +437,12 @@ export const content: Record<Language, SiteContent> = {
         'Experience with online payments (Wompi), messaging APIs (WhatsApp Business Cloud API), and Google Workspace integrations.',
         'I work with businesses and startups as well as nonprofits.',
       ],
+    },
+    howIWork: {
+      heading: 'How I work',
+      intro:
+        "I build with state-of-the-art AI tooling —Claude Code, Codex, and specialized UX/UI design agents— as a speed multiplier, inside structured workflows that enforce review and testing at every step. I own the architecture, review every line, and stand behind the result: AI accelerates execution, production experience validates it.",
+      tools: ['Claude Code', 'Codex', 'UX/UI design agents', 'Structured workflows (skills)'],
     },
     stack: {
       heading: 'Tech stack',
