@@ -46,6 +46,11 @@ describe('content', () => {
     expect(content.en.contact.github).toBe(content.es.contact.github);
   });
 
+  it('defines a WhatsApp prefill message in both languages, in the right language', () => {
+    expect(content.es.contact.whatsappMessage).toMatch(/^Hola Fredy/);
+    expect(content.en.contact.whatsappMessage).toMatch(/^Hi Fredy/);
+  });
+
   it('defines the same number of hero metrics in both languages', () => {
     expect(content.en.hero.metrics.length).toBe(content.es.hero.metrics.length);
   });

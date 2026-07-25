@@ -9,10 +9,15 @@ export function Contact() {
   const { t, language } = useLanguage();
   const { ref, revealed } = useScrollReveal<HTMLDivElement>();
 
+  const whatsappHref =
+    t.contact.whatsapp && t.contact.whatsappMessage
+      ? `${t.contact.whatsapp}?text=${encodeURIComponent(t.contact.whatsappMessage)}`
+      : t.contact.whatsapp;
+
   const endpoints = [
     { method: 'mail', value: t.contact.email, href: `mailto:${t.contact.email}` },
-    ...(t.contact.whatsapp && t.contact.whatsappDisplay
-      ? [{ method: 'chat', value: t.contact.whatsappDisplay, href: t.contact.whatsapp }]
+    ...(whatsappHref && t.contact.whatsappDisplay
+      ? [{ method: 'chat', value: t.contact.whatsappDisplay, href: whatsappHref }]
       : []),
     { method: 'web', value: t.contact.linkedinHandle, href: t.contact.linkedin },
     ...(t.contact.github && t.contact.githubHandle

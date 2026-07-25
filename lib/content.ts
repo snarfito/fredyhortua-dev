@@ -93,6 +93,7 @@ export interface SiteContent {
     githubHandle?: string;
     whatsapp?: string;
     whatsappDisplay?: string;
+    whatsappMessage?: string;
   };
   footer: {
     text: string;
@@ -325,6 +326,7 @@ export const content: Record<Language, SiteContent> = {
       githubHandle: 'snarfito',
       whatsapp: 'https://wa.me/573192618025',
       whatsappDisplay: '+57 319 261 8025',
+      whatsappMessage: 'Hola Fredy, vi tu portafolio y me gustaría hablar sobre un proyecto.',
     },
     footer: {
       text: '© 2026 Fredy Hortua. Construido con Next.js.',
@@ -550,6 +552,7 @@ export const content: Record<Language, SiteContent> = {
       githubHandle: 'snarfito',
       whatsapp: 'https://wa.me/573192618025',
       whatsappDisplay: '+57 319 261 8025',
+      whatsappMessage: "Hi Fredy, I saw your portfolio and would like to talk about a project.",
     },
     footer: {
       text: '© 2026 Fredy Hortua. Built with Next.js.',
