@@ -75,8 +75,11 @@ export interface SiteContent {
     intro: string;
     email: string;
     linkedin: string;
+    linkedinHandle: string;
     github?: string;
+    githubHandle?: string;
     whatsapp?: string;
+    whatsappDisplay?: string;
   };
   footer: {
     text: string;
@@ -273,6 +276,11 @@ export const content: Record<Language, SiteContent> = {
       intro: '¿Tienes un proyecto en mente? Escríbeme.',
       email: 'fredy.hortua@gmail.com',
       linkedin: 'https://www.linkedin.com/in/fredy-hortua-4267571a/',
+      linkedinHandle: 'fredy-hortua',
+      github: 'https://github.com/snarfito',
+      githubHandle: 'snarfito',
+      whatsapp: 'https://wa.me/573192618025',
+      whatsappDisplay: '+57 319 261 8025',
     },
     footer: {
       text: '© 2026 Fredy Hortua. Construido con Next.js.',
@@ -462,6 +470,11 @@ export const content: Record<Language, SiteContent> = {
       intro: 'Have a project in mind? Get in touch.',
       email: 'fredy.hortua@gmail.com',
       linkedin: 'https://www.linkedin.com/in/fredy-hortua-4267571a/',
+      linkedinHandle: 'fredy-hortua',
+      github: 'https://github.com/snarfito',
+      githubHandle: 'snarfito',
+      whatsapp: 'https://wa.me/573192618025',
+      whatsappDisplay: '+57 319 261 8025',
     },
     footer: {
       text: '© 2026 Fredy Hortua. Built with Next.js.',

@@ -38,4 +38,11 @@ describe('content', () => {
     expect(content.es.contact.email).toBe('fredy.hortua@gmail.com');
     expect(content.en.contact.email).toBe('fredy.hortua@gmail.com');
   });
+
+  it('includes matching WhatsApp and GitHub contact links in both languages', () => {
+    expect(content.es.contact.whatsapp).toBe('https://wa.me/573192618025');
+    expect(content.en.contact.whatsapp).toBe(content.es.contact.whatsapp);
+    expect(content.es.contact.github).toBe('https://github.com/snarfito');
+    expect(content.en.contact.github).toBe(content.es.contact.github);
+  });
 });
