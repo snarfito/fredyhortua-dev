@@ -3,58 +3,67 @@
 
 import { useLanguage } from './LanguageProvider';
 import { useScrollReveal } from './useScrollReveal';
+import { Panel } from './Panel';
+import { PhotoStack } from './PhotoStack';
 
 export function Projects() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { ref, revealed } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section id="proyectos" className="mx-auto max-w-[1120px] px-6 pt-15 pb-5">
+    <section id="proyectos" className="mx-auto max-w-[880px] px-6 pt-7">
       <div
         ref={ref}
         className={`transition-all duration-700 ease-out ${
           revealed ? 'translate-y-0 opacity-100' : 'translate-y-7 opacity-0'
         }`}
       >
-        <p className="font-mono-tag mb-2 text-xs text-[var(--color-accent-secondary)]">
-          02 · {t.projects.heading}
-        </p>
-        <h2 className="text-[clamp(26px,3.4vw,34px)] font-semibold">{t.projects.heading}</h2>
-        <p className="mt-2.5 text-base text-[var(--color-text-muted)]">{t.projects.intro}</p>
-        <div className="mt-10 grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(320px,1fr))]">
-          {t.projects.items.map((project) => (
-            <div
-              key={project.name}
-              className="overflow-hidden rounded-[18px] border border-[var(--color-border)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[var(--color-accent)]"
-            >
+        <Panel
+          label={`${language === 'es' ? 'proyectos' : 'projects'} · deployments`}
+          meta={`${t.projects.items.length} · production`}
+        >
+          <h2 className="font-heading text-[15.5px] font-semibold">{t.projects.heading}</h2>
+          <p className="mt-1 text-[13.5px] text-[var(--color-text-muted)]">{t.projects.intro}</p>
+          <div className="mt-4">
+            {t.projects.items.map((project, index) => (
               <div
-                aria-hidden
-                className="flex aspect-video items-center justify-center bg-[repeating-linear-gradient(135deg,oklch(21%_0.025_260)_0px,oklch(21%_0.025_260)_12px,oklch(16%_0.02_260)_12px,oklch(16%_0.02_260)_24px)]"
+                key={project.name}
+                className={`flex flex-col gap-4 py-5 sm:flex-row ${index > 0 ? 'border-t border-[var(--color-border)]' : ''}`}
               >
-                <span className="font-mono-tag text-[11px] text-[var(--color-text-muted)]/70">
-                  {project.name}
-                </span>
+                <PhotoStack
+                  screenshots={project.screenshots}
+                  cycleLabel={
+                    language === 'es'
+                      ? `${project.name} — pasar entre ${project.screenshots.length} capturas`
+                      : `${project.name} — browse ${project.screenshots.length} screenshots`
+                  }
+                />
+                <div className="min-w-0 flex-1 pt-1">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <span className="font-heading text-[17px] font-semibold">{project.name}</span>
+                    <span className="font-mono-tag flex items-center gap-1.5 text-[11px] whitespace-nowrap text-[var(--color-ok)]">
+                      <span className="h-1.5 w-1.5 rounded-full bg-current" aria-hidden />
+                      production
+                    </span>
+                  </div>
+                  <p className="mt-1 text-sm leading-relaxed text-[var(--color-text-muted)]">
+                    {project.description}
+                  </p>
+                  <p className="font-mono-tag mt-3 text-[11.5px] leading-relaxed text-[var(--color-accent)] normal-case tracking-normal">
+                    {project.stack}
+                  </p>
+                  <ul className="mt-3 space-y-1">
+                    {project.highlights.map((highlight) => (
+                      <li key={highlight} className="text-[13px] text-[var(--color-text-muted)]">
+                        · {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold">{project.name}</h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-[var(--color-text-muted)]">
-                  {project.description}
-                </p>
-                <p className="font-mono-tag mt-4 text-[11.5px] leading-relaxed text-[var(--color-accent)]">
-                  {project.stack}
-                </p>
-                <ul className="mt-4 flex flex-col gap-1.5">
-                  {project.highlights.map((highlight) => (
-                    <li key={highlight} className="flex items-start gap-2 text-[13px] leading-snug">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[var(--color-accent-secondary)]" />
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Panel>
       </div>
     </section>
   );

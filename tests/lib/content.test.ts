@@ -45,4 +45,28 @@ describe('content', () => {
     expect(content.es.contact.github).toBe('https://github.com/snarfito');
     expect(content.en.contact.github).toBe(content.es.contact.github);
   });
+
+  it('defines the same number of hero metrics in both languages', () => {
+    expect(content.en.hero.metrics.length).toBe(content.es.hero.metrics.length);
+  });
+
+  it('defines matching hero metric values in both languages', () => {
+    const esValues = content.es.hero.metrics.map((m) => m.value);
+    const enValues = content.en.hero.metrics.map((m) => m.value);
+    expect(enValues).toEqual(esValues);
+  });
+
+  it('defines the same number of project screenshots in both languages', () => {
+    const esCounts = content.es.projects.items.map((p) => p.screenshots.length);
+    const enCounts = content.en.projects.items.map((p) => p.screenshots.length);
+    expect(enCounts).toEqual(esCounts);
+  });
+
+  it('every project screenshot points to a src under /images/projects/', () => {
+    for (const project of [...content.es.projects.items, ...content.en.projects.items]) {
+      for (const shot of project.screenshots) {
+        expect(shot.src.startsWith('/images/projects/')).toBe(true);
+      }
+    }
+  });
 });

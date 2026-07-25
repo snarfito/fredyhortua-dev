@@ -11,11 +11,22 @@ export interface ServiceItem {
   includes: string[];
 }
 
+export interface ProjectScreenshot {
+  src: string;
+  alt: string;
+}
+
 export interface ProjectItem {
   name: string;
   description: string;
   stack: string;
   highlights: string[];
+  screenshots: ProjectScreenshot[];
+}
+
+export interface Metric {
+  value: string;
+  label: string;
 }
 
 export interface ExperienceItem {
@@ -36,11 +47,13 @@ export interface SiteContent {
     links: NavLink[];
   };
   hero: {
-    eyebrow: string;
+    terminalCommand: string;
+    terminalStatus: string;
     title: string;
     subtitle: string;
     ctaPrimary: string;
     ctaSecondary: string;
+    metrics: Metric[];
   };
   services: {
     heading: string;
@@ -98,12 +111,19 @@ export const content: Record<Language, SiteContent> = {
       ],
     },
     hero: {
-      eyebrow: 'DESARROLLO WEB · AUTOMATIZACIÓN',
+      terminalCommand: 'curl fredy-hortua.dev/status',
+      terminalStatus: '200 OK · disponible para nuevos proyectos',
       title: 'Construyo productos digitales y automatizo lo que te quita el tiempo',
       subtitle:
         'Desarrollador full-stack con más de 15 años de experiencia manteniendo sistemas en producción para plataformas SaaS y fintech. Ahora aplico esa disciplina a construir y automatizar tu próximo proyecto.',
       ctaPrimary: 'Hablemos de tu proyecto',
-      ctaSecondary: 'Ver proyectos',
+      ctaSecondary: 'Ver proyectos en producción',
+      metrics: [
+        { value: '15+', label: 'años en sistemas de producción' },
+        { value: '6', label: 'proyectos activos o en producción' },
+        { value: '2', label: 'líneas de trabajo: construir + automatizar' },
+        { value: '0', label: 'código sin revisar antes de un deploy' },
+      ],
     },
     services: {
       heading: 'Servicios',
@@ -148,6 +168,10 @@ export const content: Record<Language, SiteContent> = {
             'Aplicación y aprobación de productores',
             'Pagos en línea integrados con Wompi',
           ],
+          screenshots: [
+            { src: '/images/projects/especially-1.jpg', alt: 'Catálogo de productos de Especially' },
+            { src: '/images/projects/especially-2.jpg', alt: 'Vista 3D de personalización en Especially' },
+          ],
         },
         {
           name: 'Tixy Glamour',
@@ -160,6 +184,11 @@ export const content: Record<Language, SiteContent> = {
             'Panel gerencial',
             'En producción activa',
           ],
+          screenshots: [
+            { src: '/images/projects/tixy-1.jpg', alt: 'Formulario de orden de pedido en Tixy Glamour' },
+            { src: '/images/projects/tixy-2.jpg', alt: 'Panel de gerencia en Tixy Glamour' },
+            { src: '/images/projects/tixy-3.jpg', alt: 'Administración de colecciones en Tixy Glamour' },
+          ],
         },
         {
           name: 'VOO Ingeniería',
@@ -171,6 +200,7 @@ export const content: Record<Language, SiteContent> = {
             'Comunicación de servicios técnicos especializados',
             'Generación de contactos comerciales',
           ],
+          screenshots: [],
         },
         {
           name: "Soul's Colors by Bibi",
@@ -182,6 +212,10 @@ export const content: Record<Language, SiteContent> = {
             'Presencia de marca',
             'Canal de pedidos para un negocio creativo pequeño',
           ],
+          screenshots: [
+            { src: '/images/projects/soulscolors-1.jpg', alt: "Página de inicio de Soul's Colors by Bibi" },
+            { src: '/images/projects/soulscolors-2.jpg', alt: "Talleres de Soul's Colors by Bibi" },
+          ],
         },
         {
           name: 'Gestor de Rifas',
@@ -191,6 +225,11 @@ export const content: Record<Language, SiteContent> = {
           highlights: [
             'Seguimiento en tiempo real de números vendidos/disponibles',
             'Gestión de participantes sin hojas de cálculo manuales',
+          ],
+          screenshots: [
+            { src: '/images/projects/rifas-1.jpg', alt: 'Progreso de ventas de la rifa' },
+            { src: '/images/projects/rifas-2.jpg', alt: 'Grilla completa de números de la rifa' },
+            { src: '/images/projects/rifas-3.jpg', alt: 'Configuración de la rifa' },
           ],
         },
         {
@@ -203,6 +242,11 @@ export const content: Record<Language, SiteContent> = {
             'Formulario inteligente que evita perfiles duplicados',
             'Organigramas ministeriales interactivos con D3.js',
             'Analizador de carga ministerial y sincronización de permisos en Google Drive',
+          ],
+          screenshots: [
+            { src: '/images/projects/huna-1.jpg', alt: 'Organigrama ministerial interactivo de HUNA' },
+            { src: '/images/projects/huna-2.jpg', alt: 'Tablero de trabajo del bot de recordatorios de HUNA' },
+            { src: '/images/projects/huna-3.jpg', alt: 'Tabla de conversaciones del bot de recordatorios de HUNA' },
           ],
         },
       ],
@@ -297,12 +341,19 @@ export const content: Record<Language, SiteContent> = {
       ],
     },
     hero: {
-      eyebrow: 'WEB DEVELOPMENT · AUTOMATION',
+      terminalCommand: 'curl fredy-hortua.dev/status',
+      terminalStatus: '200 OK · available for new projects',
       title: 'I build digital products and automate the busywork',
       subtitle:
         'Full-stack developer with 15+ years of experience keeping production systems running for SaaS and fintech platforms. I bring that same discipline to building and automating your next project.',
       ctaPrimary: "Let's talk about your project",
-      ctaSecondary: 'See projects',
+      ctaSecondary: 'See projects in production',
+      metrics: [
+        { value: '15+', label: 'years in production systems' },
+        { value: '6', label: 'active or production projects' },
+        { value: '2', label: 'lines of work: build + automate' },
+        { value: '0', label: 'unreviewed code before a deploy' },
+      ],
     },
     services: {
       heading: 'Services',
@@ -347,6 +398,10 @@ export const content: Record<Language, SiteContent> = {
             'Producer application and approval workflow',
             'Integrated online payments with Wompi',
           ],
+          screenshots: [
+            { src: '/images/projects/especially-1.jpg', alt: 'Especially product catalog' },
+            { src: '/images/projects/especially-2.jpg', alt: '3D customization preview in Especially' },
+          ],
         },
         {
           name: 'Tixy Glamour',
@@ -359,6 +414,11 @@ export const content: Record<Language, SiteContent> = {
             'Manager dashboard',
             'Live in production',
           ],
+          screenshots: [
+            { src: '/images/projects/tixy-1.jpg', alt: 'Order form in Tixy Glamour' },
+            { src: '/images/projects/tixy-2.jpg', alt: 'Manager dashboard in Tixy Glamour' },
+            { src: '/images/projects/tixy-3.jpg', alt: 'Collection administration in Tixy Glamour' },
+          ],
         },
         {
           name: 'VOO Ingeniería',
@@ -370,6 +430,7 @@ export const content: Record<Language, SiteContent> = {
             'Communicating specialized technical services',
             'Generating business leads',
           ],
+          screenshots: [],
         },
         {
           name: "Soul's Colors by Bibi",
@@ -377,6 +438,10 @@ export const content: Record<Language, SiteContent> = {
             'Website for a brand of hand-painted, personalized Bibles, biblical lettering, and creative workshops, shipping across Colombia.',
           stack: 'HTML · CSS · JavaScript · Vercel Blob',
           highlights: ['Visual product catalog', 'Brand presence', 'Order channel for a small creative business'],
+          screenshots: [
+            { src: '/images/projects/soulscolors-1.jpg', alt: "Soul's Colors by Bibi homepage" },
+            { src: '/images/projects/soulscolors-2.jpg', alt: "Soul's Colors by Bibi workshops" },
+          ],
         },
         {
           name: 'Raffle Manager',
@@ -386,12 +451,22 @@ export const content: Record<Language, SiteContent> = {
             'Real-time tracking of sold/available numbers',
             'Participant management without manual spreadsheets',
           ],
+          screenshots: [
+            { src: '/images/projects/rifas-1.jpg', alt: 'Raffle sales progress' },
+            { src: '/images/projects/rifas-2.jpg', alt: 'Full raffle number grid' },
+            { src: '/images/projects/rifas-3.jpg', alt: 'Raffle configuration' },
+          ],
         },
         {
           name: 'HUNA automation suite',
           description:
             'A suite of automation tools for a church with hundreds of volunteers, integrated with Planning Center Online and Google Workspace.',
           stack: 'FastAPI · Python · Node.js/Express · D3.js · Google APIs · WhatsApp Business Cloud API',
+          screenshots: [
+            { src: '/images/projects/huna-1.jpg', alt: 'HUNA interactive ministry org chart' },
+            { src: '/images/projects/huna-2.jpg', alt: 'HUNA reminder bot work board' },
+            { src: '/images/projects/huna-3.jpg', alt: 'HUNA reminder bot conversations table' },
+          ],
           highlights: [
             'WhatsApp reminder bot for ministry leaders',
             'Smart form that prevents duplicate profiles',

@@ -6,41 +6,42 @@ export function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section id="hero" className="relative mx-auto max-w-[900px] overflow-hidden px-6 py-28 text-center sm:py-36">
-      <div
-        aria-hidden
-        className="fh-orb-a pointer-events-none absolute -top-20 -left-16 h-80 w-80 rounded-full bg-[var(--color-accent)]/[0.18] blur-[60px]"
-      />
-      <div
-        aria-hidden
-        className="fh-orb-b pointer-events-none absolute -right-16 -bottom-24 h-[340px] w-[340px] rounded-full bg-[var(--color-accent-secondary)]/[0.16] blur-[70px]"
-      />
-      <div className="relative">
-        <p className="font-mono-tag mb-5 text-[13px] text-[var(--color-accent)]">
-          {t.hero.eyebrow}
-          <span
-            aria-hidden
-            className="fh-cursor ml-1 inline-block h-3.5 w-2 align-middle bg-[var(--color-accent)]"
-          />
-        </p>
-        <h1 className="text-[clamp(34px,6vw,58px)] leading-[1.08] font-semibold tracking-tight">{t.hero.title}</h1>
-        <p className="mx-auto mt-6 max-w-[620px] text-lg leading-relaxed text-[var(--color-text-muted)]">
-          {t.hero.subtitle}
-        </p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="#contacto"
-            className="rounded-full bg-[var(--color-accent)] px-[30px] py-3.5 text-[15px] font-semibold text-[var(--color-bg)] no-underline transition-all duration-300 ease-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_oklch(68%_0.19_280_/_0.3)]"
-          >
-            {t.hero.ctaPrimary}
-          </a>
-          <a
-            href="#proyectos"
-            className="rounded-full border border-[var(--color-border)] px-[30px] py-3.5 text-[15px] font-medium text-[var(--color-text)] no-underline transition-colors duration-300 hover:border-[var(--color-accent)]"
-          >
-            {t.hero.ctaSecondary}
-          </a>
-        </div>
+    <section id="hero" className="mx-auto max-w-[880px] px-6 pt-14">
+      <p className="font-mono-tag text-[12.5px] text-[var(--color-text-muted)]">
+        $ {t.hero.terminalCommand}
+        <br />→{' '}
+        <span className="text-[var(--color-accent)]">
+          {t.hero.terminalStatus}
+          <span aria-hidden className="fh-cursor ml-1 inline-block h-3.5 w-2 align-middle bg-[var(--color-accent)]" />
+        </span>
+      </p>
+      <h1 className="font-heading mt-5 max-w-[15ch] text-[clamp(28px,4.4vw,44px)] leading-[1.12] font-semibold tracking-tight">
+        {t.hero.title}
+      </h1>
+      <p className="mt-6 max-w-[62ch] text-lg leading-relaxed text-[var(--color-text-muted)]">{t.hero.subtitle}</p>
+      <div className="mt-10 flex flex-wrap items-center gap-4">
+        <a
+          href="#contacto"
+          className="rounded-md bg-[var(--color-accent)] px-6 py-3 text-[15px] font-semibold text-[var(--color-text)] no-underline transition-transform duration-150 ease-out active:scale-95"
+        >
+          {t.hero.ctaPrimary}
+        </a>
+        <a
+          href="#proyectos"
+          className="rounded-md border border-[var(--color-border)] px-6 py-3 text-[15px] font-medium text-[var(--color-text)] no-underline transition-colors duration-150 hover:border-[var(--color-accent)] active:scale-95"
+        >
+          {t.hero.ctaSecondary}
+        </a>
+      </div>
+      <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-md border border-[var(--color-border)] bg-[var(--color-border)] sm:grid-cols-4">
+        {t.hero.metrics.map((metric) => (
+          <div key={metric.label} className="bg-[var(--color-bg)] px-4 py-4">
+            <div className="font-mono-tag text-[22px] font-semibold text-[var(--color-accent)] tabular-nums normal-case tracking-normal">
+              {metric.value}
+            </div>
+            <div className="mt-1 text-xs text-[var(--color-text-muted)]">{metric.label}</div>
+          </div>
+        ))}
       </div>
     </section>
   );
