@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const features = {
   clientes: [
-    'Catálogo organizado por ocasión (Hora Loca, Cumpleaños, Baby Shower...) con foto grande de entrada por categoría — sin los menús anidados que complicaban la página de referencia que revisamos juntos',
+    'Catálogo organizado por ocasión (Hora Loca, Cumpleaños, Baby Shower...) con foto grande de entrada por categoría y navegación simple, sin menús anidados',
     'Filtros dentro de cada categoría para refinar la búsqueda',
     'Carrito de compras',
     'Pago en línea seguro con Wompi',
