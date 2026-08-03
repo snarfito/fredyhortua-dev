@@ -59,6 +59,17 @@ export function Projects() {
                       </li>
                     ))}
                   </ul>
+                  {project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono-tag mt-3 inline-flex items-center gap-1.5 text-[11.5px] text-[var(--color-text)] no-underline normal-case tracking-normal transition-colors hover:text-[var(--color-accent)]"
+                    >
+                      {language === 'es' ? 'Visitar sitio' : 'Visit site'}
+                      <span aria-hidden>→</span>
+                    </a>
+                  )}
                 </div>
               </div>
             ))}

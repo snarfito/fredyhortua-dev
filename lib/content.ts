@@ -22,6 +22,7 @@ export interface ProjectItem {
   stack: string;
   highlights: string[];
   screenshots: ProjectScreenshot[];
+  url?: string;
 }
 
 export interface Metric {
@@ -173,6 +174,7 @@ export const content: Record<Language, SiteContent> = {
             { src: '/images/projects/especially-1.jpg', alt: 'Catálogo de productos de Especially' },
             { src: '/images/projects/especially-2.jpg', alt: 'Vista 3D de personalización en Especially' },
           ],
+          url: 'https://www.especially.lat',
         },
         {
           name: 'Tixy Glamour',
@@ -190,6 +192,7 @@ export const content: Record<Language, SiteContent> = {
             { src: '/images/projects/tixy-2.jpg', alt: 'Panel de gerencia en Tixy Glamour' },
             { src: '/images/projects/tixy-3.jpg', alt: 'Administración de colecciones en Tixy Glamour' },
           ],
+          url: 'https://www.tixyglamour.com',
         },
         {
           name: 'VOO Ingeniería',
@@ -217,6 +220,7 @@ export const content: Record<Language, SiteContent> = {
             { src: '/images/projects/soulscolors-1.jpg', alt: "Página de inicio de Soul's Colors by Bibi" },
             { src: '/images/projects/soulscolors-2.jpg', alt: "Talleres de Soul's Colors by Bibi" },
           ],
+          url: 'https://www.soulcolorsbybibi.com',
         },
         {
           name: 'Gestor de Rifas',
@@ -404,6 +408,7 @@ export const content: Record<Language, SiteContent> = {
             { src: '/images/projects/especially-1.jpg', alt: 'Especially product catalog' },
             { src: '/images/projects/especially-2.jpg', alt: '3D customization preview in Especially' },
           ],
+          url: 'https://www.especially.lat',
         },
         {
           name: 'Tixy Glamour',
@@ -421,6 +426,7 @@ export const content: Record<Language, SiteContent> = {
             { src: '/images/projects/tixy-2.jpg', alt: 'Manager dashboard in Tixy Glamour' },
             { src: '/images/projects/tixy-3.jpg', alt: 'Collection administration in Tixy Glamour' },
           ],
+          url: 'https://www.tixyglamour.com',
         },
         {
           name: 'VOO Ingeniería',
@@ -444,6 +450,7 @@ export const content: Record<Language, SiteContent> = {
             { src: '/images/projects/soulscolors-1.jpg', alt: "Soul's Colors by Bibi homepage" },
             { src: '/images/projects/soulscolors-2.jpg', alt: "Soul's Colors by Bibi workshops" },
           ],
+          url: 'https://www.soulcolorsbybibi.com',
         },
         {
           name: 'Raffle Manager',
