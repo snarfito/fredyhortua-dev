@@ -195,16 +195,22 @@ export const content: Record<Language, SiteContent> = {
           url: 'https://www.tixyglamour.com',
         },
         {
-          name: 'VOO Ingeniería',
+          name: 'Crazy Hour',
           description:
-            'Sitio web corporativo para una empresa de ingeniería topográfica: topografía de precisión, drones, LiDAR, GNSS, modelado 3D y BIM.',
-          stack: 'Next.js · Framer Motion · Tailwind',
+            'Tienda en línea para una piñatería y distribuidora de artículos de fiesta: catálogo por temáticas, carrito, checkout por WhatsApp, pagos en línea y panel de administración.',
+          stack: 'Next.js 16 · React 19 · Supabase · Tailwind · Wompi · WhatsApp',
           highlights: [
-            'Presencia digital profesional',
-            'Comunicación de servicios técnicos especializados',
-            'Generación de contactos comerciales',
+            'Catálogo de más de 17 temáticas con carrito y checkout por WhatsApp',
+            'Pagos en línea con Wompi en producción',
+            'Panel de administración para productos y pedidos',
+            'En producción activa',
           ],
-          screenshots: [],
+          screenshots: [
+            { src: '/images/projects/crazyhour-1.jpg', alt: 'Página de inicio de Crazy Hour' },
+            { src: '/images/projects/crazyhour-2.jpg', alt: 'Categoría de Halloween en Crazy Hour' },
+            { src: '/images/projects/crazyhour-3.jpg', alt: 'Carrito de compras en Crazy Hour' },
+          ],
+          url: 'https://www.crazyhour.co',
         },
         {
           name: "Soul's Colors by Bibi",
@@ -429,16 +435,22 @@ export const content: Record<Language, SiteContent> = {
           url: 'https://www.tixyglamour.com',
         },
         {
-          name: 'VOO Ingeniería',
+          name: 'Crazy Hour',
           description:
-            'Corporate website for a surveying engineering company: precision topography, drones, LiDAR, GNSS, 3D modeling, and BIM.',
-          stack: 'Next.js · Framer Motion · Tailwind',
+            'Online store for a piñata and party-supplies distributor: theme-based catalog, cart, WhatsApp checkout, online payments, and an admin panel.',
+          stack: 'Next.js 16 · React 19 · Supabase · Tailwind · Wompi · WhatsApp',
           highlights: [
-            'Professional digital presence',
-            'Communicating specialized technical services',
-            'Generating business leads',
+            'Catalog of 17+ party themes with cart and WhatsApp checkout',
+            'Online payments with Wompi live in production',
+            'Admin panel for products and orders',
+            'Live in production',
           ],
-          screenshots: [],
+          screenshots: [
+            { src: '/images/projects/crazyhour-1.jpg', alt: 'Crazy Hour homepage' },
+            { src: '/images/projects/crazyhour-2.jpg', alt: 'Halloween category in Crazy Hour' },
+            { src: '/images/projects/crazyhour-3.jpg', alt: 'Shopping cart in Crazy Hour' },
+          ],
+          url: 'https://www.crazyhour.co',
         },
         {
           name: "Soul's Colors by Bibi",
