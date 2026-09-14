@@ -122,7 +122,7 @@ export const content: Record<Language, SiteContent> = {
       ctaSecondary: 'Ver proyectos en producción',
       metrics: [
         { value: '15+', label: 'años en sistemas de producción' },
-        { value: '6', label: 'proyectos activos o en producción' },
+        { value: '7', label: 'proyectos activos o en producción' },
         { value: '2', label: 'líneas de trabajo: construir + automatizar' },
         { value: '0', label: 'código sin revisar antes de un deploy' },
       ],
@@ -227,6 +227,24 @@ export const content: Record<Language, SiteContent> = {
             { src: '/images/projects/soulscolors-2.jpg', alt: "Talleres de Soul's Colors by Bibi" },
           ],
           url: 'https://www.soulcolorsbybibi.com',
+        },
+        {
+          name: 'S&S Collection',
+          description:
+            'Catálogo digital privado para una tienda de calzado y accesorios: los clientes navegan por categoría y piden por WhatsApp, mientras el dueño edita el catálogo desde el celular con un PIN de acceso.',
+          stack: 'HTML · CSS · JavaScript · Vercel Functions · Upstash Redis · Vercel Blob',
+          highlights: [
+            'Navegación por categorías con pedido directo por WhatsApp',
+            'Modo edición protegido por PIN para agregar, editar y ocultar prendas',
+            'Carga de fotos de producto con Vercel Blob',
+            'Sitio estático con funciones serverless, sin base de datos tradicional',
+          ],
+          screenshots: [
+            { src: '/images/projects/sscollection-1.jpg', alt: 'Catálogo de S&S Collection' },
+            { src: '/images/projects/sscollection-2.jpg', alt: 'Modo de edición de prendas en S&S Collection' },
+            { src: '/images/projects/sscollection-3.jpg', alt: 'Vista de detalle de producto en S&S Collection' },
+          ],
+          url: 'https://sscollection.co',
         },
         {
           name: 'Gestor de Rifas',
@@ -362,7 +380,7 @@ export const content: Record<Language, SiteContent> = {
       ctaSecondary: 'See projects in production',
       metrics: [
         { value: '15+', label: 'years in production systems' },
-        { value: '6', label: 'active or production projects' },
+        { value: '7', label: 'active or production projects' },
         { value: '2', label: 'lines of work: build + automate' },
         { value: '0', label: 'unreviewed code before a deploy' },
       ],
@@ -463,6 +481,24 @@ export const content: Record<Language, SiteContent> = {
             { src: '/images/projects/soulscolors-2.jpg', alt: "Soul's Colors by Bibi workshops" },
           ],
           url: 'https://www.soulcolorsbybibi.com',
+        },
+        {
+          name: 'S&S Collection',
+          description:
+            'Private digital catalog for a shoe and accessories store: customers browse by category and order via WhatsApp, while the owner edits the catalog from their phone behind a PIN.',
+          stack: 'HTML · CSS · JavaScript · Vercel Functions · Upstash Redis · Vercel Blob',
+          highlights: [
+            'Category browsing with direct WhatsApp ordering',
+            'PIN-protected edit mode to add, edit, and hide items',
+            'Product photo uploads with Vercel Blob',
+            'Static site with serverless functions, no traditional database',
+          ],
+          screenshots: [
+            { src: '/images/projects/sscollection-1.jpg', alt: 'S&S Collection catalog' },
+            { src: '/images/projects/sscollection-2.jpg', alt: 'Item edit mode in S&S Collection' },
+            { src: '/images/projects/sscollection-3.jpg', alt: 'Product detail view in S&S Collection' },
+          ],
+          url: 'https://sscollection.co',
         },
         {
           name: 'Raffle Manager',
